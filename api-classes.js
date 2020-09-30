@@ -114,6 +114,7 @@ class StoryList {
     });
 
     user.ownStories = userResponse.data.user.stories.map(s => new Story(s));
+    user.favorites = userResponse.data.user.favorites.map(s => new Story(s));
     console.log(user.ownStories);
   }
 }
